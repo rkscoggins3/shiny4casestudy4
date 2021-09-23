@@ -46,15 +46,11 @@ fillmap2<-function(map, figtitle, y , leg.loc="beside", y.scl=NULL,
   }
 }
 
-data <- read.csv('C:\\Users\\rks2068\\Documents\\DSC 551\\Shiny Case Study 4\\Data\\Data4Shiny.csv')
+data <- read.csv('Data4Shiny.csv')
 head(data)
 
-NCtracts=readOGR("C:\\Users\\rks2068\\Documents\\DSC 551\\tl_2016_37_tract\\tl_2016_37_tract.shp")
-# head(NCtracts)
-NHtracts=NCtracts[which(NCtracts$COUNTYFP==129),]
-NHtracts$TRACTCE <- as.integer(NHtracts$TRACTCE)
-NHtracts <-NHtracts[order(NHtracts$TRACTCE),]
-NHtracts <- NHtracts[1:44,]
+NCtracts=readOGR("NHtracts.shp")
+
 
 #simply plot the arrest data
 shinyServer(function(input,output){
