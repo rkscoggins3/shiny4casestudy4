@@ -46,10 +46,10 @@ fillmap2<-function(map, figtitle, y , leg.loc="beside", y.scl=NULL,
   }
 }
 
-data <- read.csv('Data4Shiny.csv')
+data <- read.csv('Data\\Data4Shiny.csv')
 head(data)
 
-NHtracts=readOGR("NHtracts.shp")
+NHtracts=readOGR("Data\\NHtracts.shp")
 
 
 #simply plot the arrest data
