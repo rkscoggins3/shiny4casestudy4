@@ -158,40 +158,40 @@ shinyServer(function(input,output){
     fillmap2(NHtracts,Caption,MapData,map.lty = 0,leg.loc = "beside",y.scl = MapDataScl,leg.rnd = 2)
   })
   
-#   output$table <- renderTable({
-#     if (input$adj=="Poisson Regression"){
-#       if (input$data=="Total Arrests"){
-#         mat=exp(fe[1:6,])
-#         colnames(mat)<-c("Mean","95% CI Lower Bound","95% CI Upper Bound")
-#         rownames(mat)<-c("% Black",
-#                          "% Living in Poverty",
-#                          "% Bachelors degree or more",
-#                          "% Male",
-#                          "% Secondary Homes",
-#                          "% Aged 18-24")
-#         mat
-#       } else
-#         if (input$data=="White Only Arrests"){
-#           mat=exp(fe[7:12,])
-#           colnames(mat)<-c("Mean","95% CI Lower Bound","95% CI Upper Bound")
-#           rownames(mat)<-c("% Black",
-#                            "% Living in Poverty",
-#                            "% Bachelors degree or more",
-#                            "% Male",
-#                            "% Secondary Homes",
-#                            "% Aged 18-24")
-#           mat
-#         } else {
-#           mat=exp(fe[13:18,])
-#           colnames(mat)<-c("Mean","95% CI Lower Bound","95% CI Upper Bound")
-#           rownames(mat)<-c("% Black",
-#                            "% Living in Poverty",
-#                            "% Bachelors degree or more",
-#                            "% Male",
-#                            "% Secondary Homes",
-#                            "% Aged 18-24")
-#           mat
-#         }
-#     }},rownames=T,colnames=T,digits=3,width="100%")
+   output$table <- renderTable({
+     if (input$adj=="Poisson Regression"){
+       if (input$data=="Total Arrests"){
+         mat=exp(fe[1:6,])
+         colnames(mat)<-c("Mean","95% CI Lower Bound","95% CI Upper Bound")
+         rownames(mat)<-c("% Black",
+                          "% Living in Poverty",
+                          "% Bachelors degree or more",
+                          "% Male",
+                          "% Secondary Homes",
+                          "% Aged 18-24")
+         mat
+       } else
+         if (input$data=="White Only Arrests"){
+           mat=exp(fe[7:12,])
+           colnames(mat)<-c("Mean","95% CI Lower Bound","95% CI Upper Bound")
+           rownames(mat)<-c("% Black",
+                            "% Living in Poverty",
+                            "% Bachelors degree or more",
+                            "% Male",
+                            "% Secondary Homes",
+                            "% Aged 18-24")
+           mat
+         } else {
+           mat=exp(fe[13:18,])
+           colnames(mat)<-c("Mean","95% CI Lower Bound","95% CI Upper Bound")
+           rownames(mat)<-c("% Black",
+                            "% Living in Poverty",
+                            "% Bachelors degree or more",
+                            "% Male",
+                            "% Secondary Homes",
+                            "% Aged 18-24")
+           mat
+         }
+     }},rownames=T,colnames=T,digits=3,width="100%")
 })
 
