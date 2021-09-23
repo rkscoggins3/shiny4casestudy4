@@ -17,6 +17,6 @@ shinyUI(fluidPage(
     ),
     mainPanel(
       textOutput("text"),
-      plotOutput("map")),
-      tableOutput("table"))
+      plotOutput("map"))#,
+      #tableOutput("table"))
   )))
