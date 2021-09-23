@@ -46,10 +46,10 @@ fillmap2<-function(map, figtitle, y , leg.loc="beside", y.scl=NULL,
   }
 }
 
-data <- read.csv('Data\\Data4Shiny.csv')
+data <- read.csv('data\\Data4Shiny.csv')
 head(data)
 
-NCtracts=readOGR("Data\\NHtracts.shp")
+NCtracts=readOGR("data\\NHtracts.shp")
 # head(NCtracts)
 NHtracts=NCtracts[which(NCtracts$COUNTYFP==129),]
 NHtracts$TRACTCE <- as.integer(NHtracts$TRACTCE)
